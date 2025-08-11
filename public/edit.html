@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <form action="" class="single-task-form">
+            <h4>優待銘柄の編集</h4>
+            <div class="form-control">
+                <label>優待ID</label>
+                <p class="task-edit-id"></p>
+            </div>
+            <div class="form-control">
+                <label for="name">優待名称</label>
+                <input type="text" name="name" class="task-edit-name" />
+            </div>
+            <div class="form-control">
+                <label for="expireD">有効期限</label>
+                <input type="date" name="expireD" class="task-edit-expired" />
+            </div>
+            <div class="form-control">
+                <label for="completed">使用済・未使用</label>
+                <input type="checkbox" name="used" class="task-edit-completed" />
+            </div>
+            <button type="submit" class="block btn task-edit-btn">編集</button>
+            <div class="form-alert"></div>
+            <a href="index.html" class="btn back-link">優待一覧に戻る</a>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="editYutai.js"></script>
+</body>
+</html>
