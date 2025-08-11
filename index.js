@@ -15,7 +15,7 @@ app.use("/api/v1/yutai", yutaiRoute);
 
 const start = async () => {
     try {
-        await connectDB(process.env.MONGO_URL);
+        await connectDB(process.env.MONGO_HEROKU_URL || process.env.MONGO_URL);
         app.listen(PORT, console.log("サーバが起動しました"));
     } catch (err) {
         console.log(err);
@@ -24,6 +24,7 @@ const start = async () => {
 
 start();
 
+/*
 // 「/webhook」にPOSTリクエストがあった場合の処理
 app.post("/webhook", function(req, res) {
   res.send("HTTP POST request sent to the webhook URL!");
@@ -80,3 +81,4 @@ app.post("/webhook", function(req, res) {
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost:${PORT}`)
 });
+*/
